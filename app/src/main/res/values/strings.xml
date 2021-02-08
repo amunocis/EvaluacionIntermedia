@@ -12,4 +12,9 @@
     <string name="nombre_de_item">Nombre de Item</string>
     <string name="precio_unidad">Precio unidad</string>
     <string name="cantidad">Cantidad</string>
+    <string name="btGuardar">Guardar</string>
+    <string name="btMostrar">Mostrar</string>
+    <string name="borrar_todo">Borrar Todo</string>
+    <string name="default_value">0</string>
+    <string name="shr_hint_password">hint_password</string>
 </resources>

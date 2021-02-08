@@ -20,4 +20,8 @@ class ItemRepository(private val itemDao: ItemDao) {
     fun getItemByID(id: Int): LiveData<ItemEntity> {
         return itemDao.getItemByID(id)
     }
+
+    suspend fun deleteItem(item: ItemEntity) {
+        itemDao.deleteItem(item)
+    }
 }

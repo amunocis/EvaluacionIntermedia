@@ -6,26 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <Button
-        android:id="@+id/button_first"
+    <TextView
+        android:id="@+id/tvTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/default_value"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalActual" />
+
+    <Button
+        android:id="@+id/btGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btGuardar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
         android:orientation="horizontal"
         android:stretchColumns="1"
-        tools:layout_editor_absoluteX="-158dp"
-        tools:layout_editor_absoluteY="-56dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -37,16 +51,18 @@
                 android:id="@+id/tvNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nombre_de_item" />
+                android:paddingEnd="16dp"
+                android:text="@string/nombre_de_item"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/etNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="Name"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
         </TableRow>
 
@@ -60,15 +76,18 @@
                 android:id="@+id/tvPrecio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/precio_unidad" />
+                android:paddingEnd="16dp"
+                android:text="@string/precio_unidad"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/etPrecio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:importantForAutofill="no"
                 android:inputType="number"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
         </TableRow>
 
         <TableRow
@@ -83,14 +102,41 @@
                 android:id="@+id/tvCtd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cantidad" />
+                android:paddingEnd="16dp"
+                android:text="@string/cantidad"
+                android:textSize="18sp" />
 
             <NumberPicker
                 android:id="@+id/spCtd"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:scrollbarSize="1dp"/>
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/tvTotalActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:text="Total Actual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/btMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btMostrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

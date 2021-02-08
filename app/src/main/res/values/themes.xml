@@ -22,4 +22,9 @@
     <style name="Theme.EvaluaciónIntermedia.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.EvaluaciónIntermedia.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="boxBackgroundColor">@android:color/white</item>
+    </style>
 </resources>
